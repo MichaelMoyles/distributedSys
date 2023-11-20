@@ -1,0 +1,11 @@
+# broker-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: broker
+spec:
+  selector:
+    app: broker
+  ports:
+    - protocol: TCP
+      port: 8083

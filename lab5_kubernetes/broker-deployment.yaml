@@ -1,0 +1,20 @@
+# broker-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: broker
+  template:
+    metadata:
+      labels:
+        app: broker
+    spec:
+      containers:
+      - name: broker
+        image: broker:1.0
+        ports:
+        - containerPort: 8083

@@ -1,0 +1,20 @@
+# broker-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auldfellas
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auldfellas
+  template:
+    metadata:
+      labels:
+        app: auldfellas
+    spec:
+      containers:
+      - name: auldfellas
+        image: auldfellas:1.0
+        ports:
+        - containerPort: 8080

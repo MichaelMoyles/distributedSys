@@ -1,0 +1,20 @@
+# broker-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dodgygeezers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dodgygeezers
+  template:
+    metadata:
+      labels:
+        app: dodgygeezers
+    spec:
+      containers:
+      - name: dodgygeezers
+        image: dodgygeezers:1.0
+        ports:
+        - containerPort: 8082

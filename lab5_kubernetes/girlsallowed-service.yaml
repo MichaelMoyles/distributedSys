@@ -1,0 +1,11 @@
+# broker-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: girlsallowed
+spec:
+  selector:
+    app: girlsallowed
+  ports:
+    - protocol: TCP
+      port: 8081

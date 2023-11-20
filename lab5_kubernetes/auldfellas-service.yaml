@@ -1,0 +1,11 @@
+# broker-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: auldfellas
+spec:
+  selector:
+    app: auldfellas
+  ports:
+    - protocol: TCP
+      port: 8080
